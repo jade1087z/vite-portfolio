@@ -1,0 +1,87 @@
+#project {
+    display: flex;
+    padding-top: 70px;
+
+    .project__wrap {
+        display: flex;
+
+        .wrap {
+            width: 15%;
+
+            .icon {
+                .arrow {
+                }
+            }
+        }
+
+        .text {
+            width: 85%;
+
+            .text__main {
+                font-size: 4vw;
+                font-weight: 600;
+                line-height: 120%;
+                margin-bottom: 80px;
+            }
+            .project__flexBox {
+                display: flex;
+                .leftFlex {
+                    width: 50%;
+                }
+                .righrFlex {
+                    padding-right: 8%;
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 17vw;
+
+                    .desc__title {
+                    }
+
+                    p {
+                        font-size: 1vw;
+                        font-family: var(--font-chosun);
+                    }
+
+                    .project__more {
+                        width: 40%;
+                        a {
+                            position: relative;
+                            font-family: var(--font-Roboto);
+                            transition: all 0.2s;
+                            &::before, &::after {
+                                content: "";
+                                position: absolute;
+                                width: calc(100% - 1px);
+                                height: 2px;
+                                left: 1%;
+                                bottom: 0%;
+                            }
+                            &:before {
+                                background-color: var(--white100);
+                            }
+                            &:after {
+                                background-color: var(--black600);
+                                transform: scaleX(0);
+                                transition: all 0.3s;
+                            }
+                            &:hover {
+                                color: var(--black600);
+                            }
+                            &:hover::after {
+                                transform: scaleX(1);
+                            }
+                            svg {
+                                position: absolute;
+                                right: 1%;
+                                top: 26%;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
